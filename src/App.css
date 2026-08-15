@@ -1,0 +1,34 @@
+body {
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--bg-primary); /* theme bg color */
+  color: var(--text-primary);
+  margin: 0;
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Ambient Glow Background Effect */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 350px;
+  background: var(--accent-color);
+  opacity: 0.12;
+  filter: blur(140px);
+  z-index: -1;
+  pointer-events: none;
+}

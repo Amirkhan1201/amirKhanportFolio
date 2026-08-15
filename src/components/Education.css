@@ -1,0 +1,33 @@
+.education-section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.education-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.education-card:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.education-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.education-card h4 {
+  font-size: 1.05rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
