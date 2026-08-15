@@ -139,6 +139,10 @@
 }
 
 @media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr; /* Compiles both cards into a single column on phones/tablets */
+  }
+
   .about-highlights-grid {
     grid-template-columns: 1fr;
   }
