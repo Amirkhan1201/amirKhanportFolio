@@ -8,7 +8,7 @@ export default function Hero() {
         <h1>Amir Khan J</h1>
         <h2>Full-Stack Developer</h2>
         <p>
-          Full-Stack Developer with 3.8 years of expertise building scalable, high-performance web applications across fintech, banking, and e-commerce domains. Proficient in crafting responsive UI using React.js and developing robust backend architecture with Node.js, Express.js, and RESTful APIs. Proven track record of optimizing application performance and delivering end-to-end features in fast-paced agile environments.
+          Full-Stack Developer with 3.7 years of expertise building scalable, high-performance web applications across fintech, banking, and e-commerce domains. Proficient in crafting responsive UI using React.js and developing robust backend architecture with Node.js, Express.js, and RESTful APIs. Proven track record of optimizing application performance and delivering end-to-end features in fast-paced agile environments.
         </p>
 
         <div className="hero-btns">
@@ -19,8 +19,9 @@ export default function Hero() {
             Get in Touch
           </a>
           <a
-            href="https://drive.google.com/uc?export=download&id=1ZI0AYThLl9axQ9pgfdad8iY5RdwsHC6j"
-            download="Amir_Khan_Resume.pdf"
+            href="https://drive.google.com/file/d/1yMa1Dr8iFfHpBESOdIFw8oFyU3m_dVtq/view?usp=drivesdk"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn outline-btn"
           >
             Resume 📄
@@ -30,7 +31,7 @@ export default function Hero() {
         {/* Stats Section */}
         <div className="hero-stats">
           <div className="stat-item">
-            <h4>3.8</h4>
+            <h4>3.7</h4>
             <p>Years Experience</p>
           </div>
           <div className="stat-item">

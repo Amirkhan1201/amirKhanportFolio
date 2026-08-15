@@ -50,7 +50,7 @@ export default function About() {
         >
           <h3>Who Is Amir</h3>
           <p>
-            I’m a Full-Stack Developer based in Chennai with 3.8 years of expertise building scalable, high-performance web applications across fintech, banking, and e-commerce domains.
+            I’m a Full-Stack Developer based in Chennai with 3.7 years of expertise building scalable, high-performance web applications across fintech, banking, and e-commerce domains.
           </p>
           <p>
             From crafting responsive UIs using React.js to building robust server-side logic and RESTful APIs using Node.js and Express.js, I handle applications end-to-end with a strong focus on clean architecture and optimization.
