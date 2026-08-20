@@ -22,19 +22,13 @@
   margin-bottom: 10px;
 }
 
-.hero-content h1 {
+.hero-typed-text {
   font-size: 3.5rem;
   font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 10px;
-  line-height: 1.1;
-}
-
-.hero-content h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--text-secondary);
   margin-bottom: 20px;
+  line-height: 1.1;
+  min-height: 1.2em; /* Prevents layout jumping while typing */
 }
 
 .hero-content p {
@@ -108,60 +102,6 @@
   min-width: 300px;
 }
 
-.img-placeholder {
-  width: 320px;
-  height: 320px;
-  border-radius: 30px;
-  background: var(--bg-card);
-  border: 2px dashed var(--border-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-secondary);
-  font-weight: 600;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-
-/* Mobile Responsive Adjustments */
-@media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 100px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-content h2 {
-    font-size: 1.4rem;
-  }
-
-  .hero-content p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-btns {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .hero-img-container {
-    margin-top: 20px;
-  }
-}
-
 .profile-img {
   width: 320px;
   height: 350px;
@@ -196,4 +136,53 @@
   font-size: 0.85rem;
   color: #a0aec0;
   margin: 5px 0 0 0;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+ /* Update this in Hero.css */
+.static-role {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.hero-typed-text {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 5px; /* Adjust spacing */
+  line-height: 1.1;
+  min-height: 1.2em; 
+}
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-btns {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-img-container {
+    margin-top: 20px;
+  }
 }

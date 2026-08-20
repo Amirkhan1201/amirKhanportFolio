@@ -1,14 +1,15 @@
 .skills-section {
   padding: 80px 20px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .section-title {
   font-size: 2.5rem;
   text-align: center;
   color: var(--text-primary);
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   font-weight: 800;
 }
 
@@ -16,6 +17,86 @@
   color: var(--accent-color);
 }
 
+/* =========================================
+   ICON-ONLY BLACK & WHITE LOGO LOOP
+========================================= */
+.logo-loop-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+  margin-bottom: 50px;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+}
+
+.logo-loop-track {
+  display: flex;
+  gap: 40px; /* Space between icons */
+  width: max-content;
+  animation: logoLoopScroll 30s linear infinite;
+}
+
+.logo-loop-container:hover .logo-loop-track {
+  animation-play-state: paused;
+}
+
+.loop-icon-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Make loop icons Black & White (Grayscale) */
+.logo-icon-item svg {
+  filter: grayscale(100%) brightness(1.8);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect on individual icon */
+.logo-icon-item:hover {
+  border-color: var(--accent-color);
+  background: rgba(0, 255, 204, 0.05);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+  transform: translateY(-3px) scale(1.1);
+}
+
+.logo-icon-item:hover svg {
+  filter: none; /* Restore color on hover */
+  opacity: 1;
+}
+
+@keyframes logoLoopScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 20px));
+  }
+}
+
+/* =========================================
+   SKILL CATEGORY CARDS (UNCHANGED)
+========================================= */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -77,5 +158,5 @@
   border-color: var(--accent-color);
   background: rgba(0, 255, 204, 0.05);
   transform: translateY(-2px);
-  box-shadow: 0 0 12px rgba(0, 255, 204, 0.2);
+  box-shadow: 0 0 12px rgba(0, 255, 204, 0.15);
 }
