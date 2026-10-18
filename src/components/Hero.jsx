@@ -21,7 +21,7 @@ export default function Hero() {
         />
 
         <p>
-          Full-Stack Developer with 3.7 years of expertise building scalable, high-performance web applications across fintech, banking, and e-commerce domains. Proficient in crafting responsive UI using React.js and developing robust backend architecture with Node.js, Express.js, and RESTful APIs. Proven track record of optimizing application performance and delivering end-to-end features in fast-paced agile environments.
+          MERN Stack Developer with 3.7 years of experience building scalable, high-performance web applications across fintech, banking, and e-commerce. I build responsive UIs with React.js, Next.js and TypeScript, and robust backends with Node.js, Express.js and MongoDB — from database design and REST APIs to secure JWT authentication. Proven track record of optimizing performance and delivering end-to-end features in Agile teams.
         </p>
 
         <div className="hero-btns">
@@ -32,7 +32,7 @@ export default function Hero() {
             Get in Touch
           </a>
           <a
-            href="https://drive.google.com/file/d/1yMa1Dr8iFfHpBESOdIFw8oFyU3m_dVtq/view?usp=drivesdk"
+            href="https://drive.google.com/file/d/1S3JTjxcJoIg7vNBFV8TWt0K2zhpz48pp/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="btn outline-btn"
@@ -52,8 +52,8 @@ export default function Hero() {
             <p>Projects Built</p>
           </div>
           <div className="stat-item">
-            <h4>Clean</h4>
-            <p>Component Architecture</p>
+            <h4>MERN</h4>
+            <p>Full Stack</p>
           </div>
         </div>
       </div>

@@ -4,16 +4,17 @@ import './Experience.css';
 const experiences = [
   {
     company: "COMPUNET CONNECTIONS",
-    role: "Full Stack Developer",
+    role: "Software Engineer (MERN Stack)",
     period: "Jan. 2025 – Jun. 2026",
     location: "Chennai",
     points: [
-      <>Developed full-stack features for Raqamyah, a Saudi-based P2P lending platform, using <strong>React.js</strong>, <strong>Node.js</strong>, and <strong>Express.js</strong>.</>,
-      <>Developed and integrated <strong>REST APIs</strong> using <strong>Node.js</strong> and <strong>Express.js</strong> for frontend-backend communication, including asynchronous request handling, <strong>middleware integration</strong>, and JSON-based data exchange.</>,
-      <>Built responsive and reusable <strong>React.js</strong> UI components using <strong>Material UI (MUI)</strong>, maintaining consistent layouts and responsive behavior across screen sizes.</>,
-      <>Worked on frontend development with a focus on <strong>SEO</strong> and <strong>page-speed optimization</strong> to improve search visibility and overall web performance.</>,
-      <>Optimized <strong>React</strong> application performance using lazy loading, code splitting, memoization, conditional rendering, <strong>React.memo</strong>, <strong>useMemo</strong>, and <strong>useCallback</strong>.</>,
-      <>Collaborated with Product, QA, and Engineering teams to translate requirements into scalable full-stack features and participated in GitHub/Bitbucket pull-request workflows.</>
+      <>Developed full-stack modules for Raqamyah, a Saudi-based P2P lending platform, using <strong>MongoDB</strong>, <strong>Express.js</strong>, <strong>React.js</strong> and <strong>Node.js</strong>, along with <strong>Next.js</strong> and <strong>TypeScript</strong>.</>,
+      <>Built <strong>RESTful APIs</strong> with <strong>Node.js</strong> and <strong>Express.js</strong> for loan, investment and KYC verification modules, following <strong>MVC architecture</strong>.</>,
+      <>Designed <strong>MongoDB</strong> collections and <strong>Mongoose</strong> schemas for users, loans and investments, with validation and indexing for faster queries.</>,
+      <>Implemented <strong>JWT-based authentication</strong> and <strong>Express middleware</strong> for request validation, role-based access and centralized error handling.</>,
+      <>Developed the public website and investor/borrower dashboard with <strong>React.js</strong>, <strong>Redux Toolkit</strong> and <strong>Material UI</strong>, integrating backend APIs for real-time data.</>,
+      <>Implemented <strong>server-side rendering (SSR)</strong> and dynamic routing with <strong>Next.js</strong> to improve page load speed and <strong>SEO</strong>.</>,
+      <>Improved performance using lazy loading, code splitting and memoization (<strong>React.memo</strong>, <strong>useMemo</strong>, <strong>useCallback</strong>).</>
     ]
   },
   {

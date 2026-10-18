@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import './Projects.css';
 
 const projects = [
-  { title: "Raqamyah", url: "https://raqamyah.com/en", desc: "Saudi-based peer-to-peer lending platform." },
+  { title: "Raqamyah", url: "https://raqamyah.com/en", desc: "Saudi-based P2P lending platform — full-stack MERN modules, REST APIs and investor dashboard." },
   { title: "Citi Ultima", url: "https://www.citibank.ae/credit-cards/travel/citi-ultima-credit-card", desc: "Banking UI for high-end travel credit card." },
   { title: "Ujjivan Bank", url: "https://www.ujjivansfb.bank.in/", desc: "Responsive banking interface." },
   { title: "Hold the Magic", url: "https://holdthemagic.com/", desc: "Shopify-based e-commerce platform." },

@@ -8,6 +8,10 @@ const skillIcons = {
   "CSS3": <svg viewBox="0 0 512 512" width="22" height="22"><path fill="#1572b6" d="M107.644 471.266L43.414 74.451h425.172l-64.23 396.815-148.358 41.155z"/><path fill="#33a9dc" d="M256 449.626l123.633-34.298 54.498-336.852H256z"/><path fill="#fff" d="M256 223.364H161.76l-6.425-42.662H256V136.04H98.986l19.277 127.974H256zm0 131.782l-.46.126-53.111-14.331-3.396-22.564h-42.348l6.787 45.13 89.28 24.775.448-.126z"/></svg>,
   "Redux Toolkit": <svg viewBox="0 0 128 128" width="22" height="22"><path fill="#764abc" d="M113.8 59.2c-3.3-6.5-7.8-12.2-13.3-16.7-7-5.7-15.5-9-24.6-9.4-9.4-.4-18.7 2.2-26.3 7.5-6.2 4.3-11 10.3-13.8 17.3-3.2 8-3.8 17-.1 25.4 3.6 8.4 10.2 15 18.5 18.9 8.3 3.9 17.8 4.6 26.6 1.8 1.9-.6 3.1-2.6 2.5-4.5-.6-1.9-2.6-3.1-4.5-2.5-7 2.2-14.7 1.6-21.3-1.5-6.6-3.1-11.9-8.4-14.8-15s-3-14.1-.1-21c2.9-6.9 7.6-12 13.5-15.8 6-3.9 13.1-5.9 20.3-5.6 7.2.3 14.1 3 19.8 7.8 4.6 3.8 8.3 8.6 11 14l-14.2 8.2c-1.7 1-2.3 3.2-1.3 4.9 1 1.7 3.2 2.3 4.9 1.3l17.7-10.2c1.4-.8 2.2-2.3 2.1-3.9-.1-1.6-1.1-3-2.6-3.6z"/></svg>,
   "Material UI": <svg viewBox="0 0 24 24" width="22" height="22"><path fill="#007fff" d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm-10 2.5v4.5l10 5 10-5v-4.5l-10 5-10-5z"/></svg>,
+  "MongoDB": <svg viewBox="0 0 24 24" width="22" height="22"><path fill="#47a248" d="M12.55 1.1c-.2-.4-.4-.8-.55-1.1-.15.3-.35.7-.55 1.1C9.6 4.2 5.5 7.4 5.5 13c0 4.1 2.8 7.4 5.9 8.5l.35 2.5h.5l.35-2.5c3.1-1.1 5.9-4.4 5.9-8.5 0-5.6-4.1-8.8-5.95-11.9zM12.3 20.3h-.6V5.6c.1.2.2.4.3.5.1-.1.2-.3.3-.5z"/></svg>,
+  "Express.js": <svg viewBox="0 0 24 24" width="22" height="22"><text x="12" y="16" textAnchor="middle" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="11" fill="currentColor">ex</text></svg>,
+  "Next.js": <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="11" fill="#000" stroke="#fff" strokeWidth="1"/><path fill="#fff" d="M9 7h1.6l5.4 8V7h1.4v10h-1.5L10.4 9.2V17H9z"/></svg>,
+  "TypeScript": <svg viewBox="0 0 24 24" width="22" height="22"><rect width="24" height="24" rx="3" fill="#3178c6"/><text x="13.5" y="18" textAnchor="middle" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="10" fill="#fff">TS</text></svg>,
   "Node.js": <svg viewBox="0 0 256 296" width="22" height="22"><path fill="#339933" d="M128 0l110.641 63.923v127.846L128 255.692 17.359 191.769V63.923L128 0zm0 30.923L42.179 80.5v135l85.821 49.577 85.821-49.577v-135L128 30.923zm0 36.308l58.154 33.577v67.154L128 201.538l-58.154-33.577v-67.154L128 67.23z"/></svg>,
   "REST APIs": <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 7h-9m3 10H4m10-5a3 3 0 11-6 0 3 3 0 016 0z"/></svg>,
   "Postman": <svg viewBox="0 0 512 512" width="22" height="22"><path fill="#ff6c37" d="M0 256c0 141.4 114.6 256 256 256s256-114.6 256-256S397.4 0 256 0 0 114.6 0 256zm279.1-137.9c16.3 0 29.5 13.2 29.5 29.5 0 16.3-13.2 29.5-29.5 29.5-16.3 0-29.5-13.2-29.5-29.5 0-16.3 13.2-29.5 29.5-29.5zm-88.6 0c16.3 0 29.5 13.2 29.5 29.5 0 16.3-13.2 29.5-29.5 29.5-16.3 0-29.5-13.2-29.5-29.5 0-16.3 13.2-29.5 29.5-29.5z"/></svg>,
@@ -17,15 +21,17 @@ const skillIcons = {
 };
 
 const loopSkills = [
-  "React.js", "JavaScript (ES6+)", "Redux Toolkit", "HTML5", "CSS3", 
-  "Node.js", "REST APIs", "Material UI", "Git", "GitHub", "Postman", "VS Code"
+  "MongoDB", "Express.js", "React.js", "Node.js", "Next.js", "TypeScript",
+  "JavaScript (ES6+)", "Redux Toolkit", "HTML5", "CSS3", "Material UI",
+  "REST APIs", "Git", "GitHub", "Postman", "VS Code"
 ];
 
 const skillsData = [
-  { category: "Frontend", items: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Responsive Design"] },
+  { category: "Frontend", items: ["React.js", "Next.js", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Responsive Design"] },
+  { category: "Backend", items: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "Middleware", "MVC Architecture"] },
+  { category: "Database", items: ["MongoDB", "Mongoose"] },
   { category: "State Management", items: ["Redux Toolkit", "Context API"] },
-  { category: "UI Libraries", items: ["Material UI", "Bootstrap"] },
-  { category: "Backend & APIs", items: ["Node.js", "Express.js", "REST APIs"] },
+  { category: "UI Libraries", items: ["Material UI", "Tailwind CSS", "Bootstrap"] },
   { category: "Tools & Workflow", items: ["Postman", "Git", "GitHub", "Bitbucket", "VS Code"] }
 ];
 

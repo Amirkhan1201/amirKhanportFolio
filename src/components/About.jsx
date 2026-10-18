@@ -32,10 +32,10 @@ export default function About() {
           <div className="terminal-body">
             <p><span className="keyword">const</span> <span className="variable">developer</span> = &#123;</p>
             <p className="indent"><span className="property">name</span>: <span className="string">"Amir Khan J"</span>,</p>
-            <p className="indent"><span className="property">role</span>: <span className="string">"Full Stack Developer"</span>,</p>
+            <p className="indent"><span className="property">role</span>: <span className="string">"MERN Stack Developer"</span>,</p>
             <p className="indent"><span className="property">location</span>: <span className="string">"Chennai, India"</span>,</p>
-            <p className="indent"><span className="property">expertise</span>: <span className="string">["React.js", "Node.js", "Express.js", "JavaScript"]</span>,</p>
-            <p className="indent"><span className="property">focus</span>: <span className="string">"Scalable Full-Stack Web Applications"</span></p>
+            <p className="indent"><span className="property">expertise</span>: <span className="string">["MongoDB", "Express.js", "React.js", "Node.js", "Next.js", "TypeScript"]</span>,</p>
+            <p className="indent"><span className="property">focus</span>: <span className="string">"Scalable MERN Stack Web Applications"</span></p>
             <p>&#125;;</p>
           </div>
         </motion.div>
@@ -50,24 +50,24 @@ export default function About() {
         >
           <h3>Who Is Amir</h3>
           <p>
-            I’m a Full-Stack Developer based in Chennai with 3.7 years of expertise building scalable, high-performance web applications across fintech, banking, and e-commerce domains.
+            I’m a MERN Stack Developer based in Chennai with 3.7 years of experience building scalable, high-performance web applications across fintech, banking, and e-commerce domains.
           </p>
           <p>
-            From crafting responsive UIs using React.js to building robust server-side logic and RESTful APIs using Node.js and Express.js, I handle applications end-to-end with a strong focus on clean architecture and optimization.
+            From crafting responsive UIs with React.js and Next.js to designing MongoDB schemas and building secure RESTful APIs with Node.js and Express.js, I handle applications end-to-end with a strong focus on clean architecture, security and performance.
           </p>
           
           <div className="about-highlights-grid">
             <div className="highlight-box">
-              <h4>⚡ Full-Stack Execution</h4>
-              <p>Building seamless end-to-end features from robust backend APIs to dynamic React frontends.</p>
+              <h4>⚡ MERN Execution</h4>
+              <p>Building end-to-end features across MongoDB, Express.js, React.js and Node.js.</p>
             </div>
             <div className="highlight-box">
               <h4>🏦 Enterprise Portals</h4>
               <p>Developing secure, high-performance interfaces for banking, fintech, and e-commerce platforms.</p>
             </div>
             <div className="highlight-box">
-              <h4>🔗 Backend Integration</h4>
-              <p>Managing asynchronous data exchange, middleware integration, and clean JSON workflows.</p>
+              <h4>🔗 APIs &amp; Databases</h4>
+              <p>Designing MongoDB schemas, REST APIs, JWT authentication and Express middleware.</p>
             </div>
           </div>
         </motion.div>
