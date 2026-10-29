@@ -1,15 +1,21 @@
-
-import './Education.css';
+import { education } from '../data/profile'
+import { Section, Reveal } from './ui'
 
 export default function Education() {
   return (
-    <section id="education" className="education-section">
-      <h2 className="section-title">Education</h2>
-      <div className="education-card">
-        <h3>Asan Memorial College of Arts & Science</h3>
-        <h4>Bachelor's Degree in Computer Application (BCA)</h4>
-        <span className="period">2017 – 2020 | Chennai</span>
+    <Section id="education" index={5} kicker="db.education.find()" title={<>Edu<em>cation</em></>}>
+      <div className="edu">
+        {education.map((e, i) => (
+          <Reveal key={e.title} className="edu-card" delay={i * 120}>
+            <span className="edu-seal">{e.icon}</span>
+            <div>
+              <h3>{e.title}</h3>
+              <p>{e.place}</p>
+              <span className="tag">{e.period}</span>
+            </div>
+          </Reveal>
+        ))}
       </div>
-    </section>
-  );
+    </Section>
+  )
 }

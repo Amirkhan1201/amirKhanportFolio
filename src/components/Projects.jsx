@@ -1,44 +1,45 @@
-import { motion } from 'framer-motion';
-import './Projects.css';
+import { useCallback } from 'react'
+import { projects } from '../data/profile'
+import { Section } from './ui'
 
-const projects = [
-  { title: "Raqamyah", url: "https://raqamyah.com/en", desc: "Saudi-based P2P lending platform — full-stack MERN modules, REST APIs and investor dashboard." },
-  { title: "Citi Ultima", url: "https://www.citibank.ae/credit-cards/travel/citi-ultima-credit-card", desc: "Banking UI for high-end travel credit card." },
-  { title: "Ujjivan Bank", url: "https://www.ujjivansfb.bank.in/", desc: "Responsive banking interface." },
-  { title: "Hold the Magic", url: "https://holdthemagic.com/", desc: "Shopify-based e-commerce platform." },
-  { title: "Elite Shield", url: "https://www.eliteshield.com/", desc: "E-commerce application for premium gear." },
-  { title: "Chocolat Moderne", url: "https://chocolatmoderne.com/", desc: "Premium chocolate e-commerce site." }
-];
-
+/** Each project as a live API route that returns 200 OK. */
 export default function Projects() {
-  return (
-    <section id="projects" className="projects-section">
-      <motion.h2 
-        className="section-title"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        Featured <span>Projects</span>
-      </motion.h2>
+  const onMove = useCallback((e) => {
+    const r = e.currentTarget.getBoundingClientRect()
+    e.currentTarget.style.setProperty('--gx', `${e.clientX - r.left}px`)
+    e.currentTarget.style.setProperty('--gy', `${e.clientY - r.top}px`)
+  }, [])
 
-      <div className="projects-grid">
-        {projects.map((proj, index) => (
-          <motion.div 
-            key={index} 
-            className="project-card"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+  return (
+    <Section id="projects" index={3} kicker="GET /api/projects" title={<>Featured <em>Projects</em></>}>
+      <div className="routes">
+        {projects.map((p, i) => (
+          <a
+            key={p.slug}
+            href={p.url}
+            target="_blank"
+            rel="noreferrer"
+            className="route"
+            onMouseMove={onMove}
+            style={{ animationDelay: `${i * 80}ms` }}
           >
-            <h3>{proj.title}</h3>
-            <p>{proj.desc}</p>
-            <a href={proj.url} target="_blank" rel="noreferrer" className="view-btn">View Project</a>
-          </motion.div>
+            <div className="route-top mono">
+              <span className="method get">GET</span>
+              <span className="route-path">/projects/{p.slug}</span>
+              <span className="route-ok">200</span>
+            </div>
+            <span className="route-type mono">{p.type}</span>
+            <h3>{p.title}</h3>
+            <p>{p.desc}</p>
+            <div className="route-stack">
+              {p.stack.map((s) => (
+                <span key={s} className="tag">{s}</span>
+              ))}
+            </div>
+            <span className="route-link mono">View Project ↗</span>
+          </a>
         ))}
       </div>
-    </section>
-  );
+    </Section>
+  )
 }

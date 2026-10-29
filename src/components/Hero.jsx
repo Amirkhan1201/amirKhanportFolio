@@ -1,66 +1,102 @@
-import "./Hero.css";
-import { TypeAnimation } from 'react-type-animation';
+import { useEffect, useRef, useState } from 'react'
+import { profile } from '../data/profile'
+import { useTypewriter, useCountUp } from '../hooks'
+import { SplitText, Magnetic } from './ui'
+
+const STACK = [
+  { l: 'M', name: 'MongoDB', c: '#00ed64' },
+  { l: 'E', name: 'Express', c: '#e9ecf5' },
+  { l: 'R', name: 'React', c: '#61dafb' },
+  { l: 'N', name: 'Node.js', c: '#8cc84b' },
+]
+
+function Stat({ s, i }) {
+  const v = useCountUp(s.value, true, 1600 + i * 200, s.decimals || 0)
+  return (
+    <div className="stat">
+      <strong>
+        {s.decimals ? v.toFixed(s.decimals) : v}
+        {s.suffix}
+      </strong>
+      <span>{s.label}</span>
+    </div>
+  )
+}
 
 export default function Hero() {
+  const role = useTypewriter(profile.roles)
+  const [lit, setLit] = useState(0)
+  const scene = useRef(null)
+
+  // light up M → E → R → N in a loop
+  useEffect(() => {
+    const t = setInterval(() => setLit((n) => (n + 1) % STACK.length), 1100)
+    return () => clearInterval(t)
+  }, [])
+
+  useEffect(() => {
+    const el = scene.current
+    if (!el || window.matchMedia('(pointer: coarse)').matches) return
+    const move = (e) => {
+      el.style.setProperty('--mx', (e.clientX / innerWidth - 0.5).toFixed(3))
+      el.style.setProperty('--my', (e.clientY / innerHeight - 0.5).toFixed(3))
+    }
+    window.addEventListener('mousemove', move)
+    return () => window.removeEventListener('mousemove', move)
+  }, [])
+
   return (
-    <section id="hero" className="hero-section">
-      <div className="hero-content animate-fade-in">
-        <h3>Hello, I'm</h3>
-        
-       {/* Cinematic Single-Run Typewriter Animation */}
-        <TypeAnimation
-          sequence={[
-            'Amir Khan J', // Type your name
-            1000,          // Wait 1s after finishing
-          ]}
-          wrapper="h1"
-          cursor={true}    // Shows the blinking cursor
-          repeat={0}       // Stops after one run (0 = no repeat)
-          speed={10}       // Speed: Lower number = faster, higher = slower/smoother
-          className="hero-typed-text"
-        />
+    <section id="home" className="hero" ref={scene}>
+      <div className="hero-grid" aria-hidden="true" />
+      <div className="orb orb-a" aria-hidden="true" />
+      <div className="orb orb-b" aria-hidden="true" />
 
-        <p>
-          MERN Stack Developer with 3.7 years of experience building scalable, high-performance web applications across fintech, banking, and e-commerce. I build responsive UIs with React.js, Next.js and TypeScript, and robust backends with Node.js, Express.js and MongoDB — from database design and REST APIs to secure JWT authentication. Proven track record of optimizing performance and delivering end-to-end features in Agile teams.
-        </p>
+      <div className="hero-inner">
+        <div className="hero-copy">
+          <p className="hero-status">
+            <span className="pulse" /> Open to opportunities · {profile.location}
+          </p>
+          <p className="hero-hello mono">Hello, I'm</p>
+          <h1 className="hero-name">
+            <SplitText text="Amir Khan J" delay={150} />
+          </h1>
+          <p className="hero-role mono">
+            <span className="dim">$ </span>
+            <span className="typed">{role}</span>
+            <span className="caret" />
+          </p>
+          <p className="hero-lead">{profile.intro}</p>
 
-        <div className="hero-btns">
-          <a href="#experience" className="btn primary-btn">
-            View Experience
-          </a>
-          <a href="#contact" className="btn secondary-btn">
-            Get in Touch
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1S3JTjxcJoIg7vNBFV8TWt0K2zhpz48pp/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn outline-btn"
-          >
-            Resume 📄
-          </a>
-        </div>
-
-        {/* Stats Section */}
-        <div className="hero-stats">
-          <div className="stat-item">
-            <h4>3.7</h4>
-            <p>Years Experience</p>
+          <div className="hero-ctas">
+            <Magnetic href="#experience" className="btn btn-primary">
+              View Experience <span>→</span>
+            </Magnetic>
+            <Magnetic href={profile.resume} target="_blank" rel="noreferrer" className="btn btn-ghost">
+              Resume ↗
+            </Magnetic>
           </div>
-          <div className="stat-item">
-            <h4>10+</h4>
-            <p>Projects Built</p>
-          </div>
-          <div className="stat-item">
-            <h4>MERN</h4>
-            <p>Full Stack</p>
+
+          <div className="stats">
+            {profile.stats.map((s, i) => (
+              <Stat key={s.label} s={s} i={i} />
+            ))}
           </div>
         </div>
-      </div>
 
-      <div className="hero-img-container floating">
-        <img src="/profile.jpg" alt="Amir Khan J" className="profile-img" />
+        <div className="hero-visual">
+          <figure className="portrait">
+            <img src="/profile.jpg" alt={`${profile.name}, ${profile.role}`} width="1123" height="1401" />
+            <figcaption className="stack-strip" aria-label="MERN stack">
+              {STACK.map((s, i) => (
+                <span key={s.l} className={`stack-tile ${i === lit ? 'is-lit' : ''}`} style={{ '--c': s.c }}>
+                  <b>{s.l}</b>
+                  <small>{s.name}</small>
+                </span>
+              ))}
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </section>
-  );
+  )
 }
